@@ -1,9 +1,6 @@
 //Kolin Giuliano
 //5/2/2018
 //Homework 5
-//The dashed lines note areas of logic, I kept all minute lengths to 100 as in the picture.
-//I would like to learn how to use a database such as IMDB to call the actual minute lengths and Genres in the future.
-
 
 public class testMovie {
 
