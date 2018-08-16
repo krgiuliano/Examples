@@ -1,9 +1,6 @@
 //Kolin Giuliano
 //4/26/2018
 //Lab10
-//Abstraction is related to this lab because we don't know exactly what is behind both the Car and the Truck objects but we know what it wants from us.
-//Encapsulation is related to the lab through the methods such as the displayVehicle(), displayTruck(), and displayCar(); methods.
-//Inheritance is related to this lab because the Car and Truck objects extend the main class of Vehicle for some of their Properties.
 
 package lab10;
 
