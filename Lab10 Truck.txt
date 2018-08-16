@@ -1,0 +1,35 @@
+package lab10;
+
+public class Truck extends Vehicle {
+	
+	private int towCapacity;
+	private boolean Commercial;
+	
+	public Truck(){
+		//Default Constructor
+	}
+	
+	public Truck(int newtowCapacity, boolean newCommercial) {
+		this.towCapacity = newtowCapacity;
+		this.Commercial = newCommercial;	
+	}
+	
+	public void settowCapacity (int newtowCapacity) {
+		this.towCapacity = newtowCapacity;
+	}
+	public void setCommercial (boolean newCommercial) {
+		this.Commercial = newCommercial;
+	}
+
+	public int gettowCapacity() {
+		return this.towCapacity;
+	}
+	public boolean getCommercial() {
+		return this.Commercial;
+	}
+	
+	public void displayTruck() {
+		System.out.print("This truck's tow capacity is: " + this.towCapacity + "\n");
+		System.out.print("Is the truck for commercial use? " + this.Commercial + "\n");
+	}
+}

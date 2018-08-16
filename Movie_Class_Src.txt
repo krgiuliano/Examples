@@ -1,0 +1,77 @@
+//Kolin Giuliano
+//5/2/2018
+//Homework 5
+//Followed our lab we did in class.
+
+public class Movie {
+
+	private String Genre;
+	private String Title;
+	private int Minutes;
+	private int IDnum;
+	private static boolean Streamed = true;
+	
+	public Movie(){
+		//Default Constructor
+	}
+	
+	public Movie(String newGenre, String newTitle, int newMinutes, int newIDnum, boolean newStreamed) {
+		this.Genre = newGenre;
+		this.Title = newTitle;
+		this.Minutes = newMinutes;
+		this.IDnum = newIDnum;
+		this.Streamed = newStreamed;
+	}
+	
+	public Movie(String newTitle, int newIDnum) {
+		this.Title = newTitle;
+		this.IDnum = newIDnum;
+		
+	}
+	//---------------------------------------
+	public void setGenre(String newGenre) {
+		this.Genre = newGenre;
+	}
+	public void setTitle(String newTitle) {
+		this.Title =  newTitle;
+	}
+	public void setMinutes(int newMinutes) {
+		this.Minutes = newMinutes;
+	}
+	public void setIDnum(int newIDnum) {
+		this.IDnum = newIDnum;
+	}
+	//---------------------------------------
+	public String getGenre()
+	{
+		return Genre;
+	}
+	public String getTitle()
+	{
+		return Title;
+	}
+	public int getMinutes()
+	{
+		return Minutes;
+	}		
+	public int getIDnum()
+	{
+		return IDnum;
+	}
+	public boolean getStreamed()
+	{
+		return Streamed;
+	}		
+	//--------------------------------------
+	public void displayMovie(int IDnum, String Title, int Minutes, String Genre, boolean Streamed) {
+		System.out.print("Title: " + this.Title + "\n");
+		System.out.print("Genre: " + this.Genre + "\n");
+		System.out.print("Length(minutes): " + this.Minutes + "\n");
+		System.out.print("ID number: " + this.IDnum + "\n");
+		System.out.print("Streamed: " + this.Streamed + "\n");
+	}
+	public void displayMovie(int IDnum, String Title) {
+		System.out.print("Title: " + this.Title + "\n");
+		System.out.print("ID Number: " + this.IDnum + "\n");
+	}
+}

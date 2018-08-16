@@ -1,0 +1,26 @@
+package lab10;
+
+public class Car extends Vehicle {
+	
+	private int numPassengers;
+	
+	public Car(){
+		//Default Constructor
+	}
+	
+	public Car(int newnumPassengers) {
+		this.numPassengers = newnumPassengers;
+	}
+	
+	public void setnumPassengers (int newnumPassengers) {
+		this.numPassengers = newnumPassengers;
+	}
+	public int getnumPassengers() {
+		return this.numPassengers;
+	}
+
+	public void displayCar() {
+		System.out.print("Passenger Capacity: " + this.numPassengers + "\n");
+	
+	}
+}

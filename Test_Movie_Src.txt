@@ -1,0 +1,88 @@
+//Kolin Giuliano
+//5/2/2018
+//Homework 5
+//The dashed lines note areas of logic, I kept all minute lengths to 100 as in the picture.
+//I would like to learn how to use a database such as IMDB to call the actual minute lengths and Genres in the future.
+
+
+public class testMovie {
+
+	public static void main(String[] args) {
+
+//---------------------------------------------
+			int id[] = new int[11];
+			String[] title = new String[11];
+			int min[] = new int[11];		
+			String[] genre = new String[11];
+			boolean Streamed = false;
+			
+//---------------------------------------------
+			for(int i= 0; i< 11; i++) {
+				id[i] = i + 1001;
+			}
+//---------------------------------------------			
+			title[0]= "The Godfather";
+			title[1]= "The Shawshank Redemption";
+			title[2] = "Shindler's List";
+			title[3] = "Raging Bull";
+			title[4] = "Casablanca";
+			title[5] = "Citizen Kane";
+			title[6] = "Gone With The Wind";
+			title[7] = "The Wizard of Oz";
+			title[8] = "One Flew Over The Cuckoo's Nest";
+			title[9] = "Lawrence of Arabia";
+			title[10] = "A Fist Full of Dollars";
+//----------------------------------------------
+			for(int i= 0; i< 11; i++) {
+				int r = 100;
+				min[i] = r;
+			}	
+//---------------------------------------------
+			for (int i= 0; i< 10; i++){
+				genre[i] = "Classic";
+			}
+			genre[10] = "Western";
+			
+			String[][] films = new String[11][4];
+			
+			for(int r=0; r<11; r++) {
+				for(int c=0; c<4; c++) {
+					films[r][c] = intoArrayC(films, id, title, min, genre, Streamed, r, c);
+				
+				}
+				
+				Movie m = new Movie();
+				m.setIDnum(id[r]);
+				m.setTitle(title[r]);
+				m.setMinutes(min[r]);
+				m.setGenre(genre[r]);
+				m.displayMovie(m.getIDnum(), m.getTitle(), m.getMinutes(), m.getGenre(), m.getStreamed());
+				//m.displayMovie(m.getIDnum(), m.getTitle());
+				System.out.println("-------------------");
+		}
+	}
+
+		public static String intoArrayC (String [][] films, int id[], String[] title, int[] min, String[] genre, boolean streamed, int r, int c){
+			
+			if(c== 0){
+				films[r][c] = String.valueOf(id[r]);
+			}else if(c == 1) {
+				films[r][c] = title[r];
+				
+			}else if(c == 2) {
+				films[r][c] = String.valueOf(min[r]);
+			
+			}else if(c == 3) {
+				films[r][c] = genre[r];
+			
+			}else if(c == 4) {
+				
+				films[r][c] = String.valueOf(streamed);
+			}else {
+				System.out.println("Opps, there was a problem");
+			}
+			return films[r][c];
+		
+	}
+
+}

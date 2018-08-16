@@ -1,0 +1,59 @@
+package lab10;
+
+public class Vehicle {
+	
+	private String Make;
+	private String Model;
+	private int Odometer;
+	
+	public Vehicle(){
+		//Default Constructor
+	}
+	
+	public Vehicle(String newMake, String newModel, int newOdometer) {
+		this.Make = newMake;
+		this.Model = newModel;
+		this.Odometer = newOdometer;
+		
+	}
+
+	public void setMake(String newMake) {
+		this.Make = newMake;
+	}
+	public void setModel(String newModel) {
+		this.Model =  newModel;
+	}
+	public void setOdometer(int newOdometer) {
+		this.Odometer = newOdometer;
+	}
+	
+//---------------------------------------------------------
+	
+	public String getMake()
+	{
+		return Make;
+	}
+	public String getModel()
+	{
+		return Model;
+	}
+	public int getOdometer()
+	{
+		return Odometer;
+	}		
+	
+	public void displayVehicle() {
+		System.out.print("Model: " + this.Make + "\n");
+		System.out.print("Make: " + this.Model + "\n");
+		System.out.print("Mileage: " + this.Odometer + "\n");
+		
+	}
+	
+	public void displayVehicle(int num) {
+		System.out.print("Model: " + this.Make + "\n");
+		System.out.print("Make: " + this.Model + "\n");
+	}
+}
+
+
+}
