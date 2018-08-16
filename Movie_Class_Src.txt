@@ -1,7 +1,7 @@
 //Kolin Giuliano
 //5/2/2018
-//Homework 5
-//Followed our lab we did in class.
+
+
 
 public class Movie {
 
