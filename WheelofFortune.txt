@@ -1,0 +1,62 @@
+
+
+package wheel;
+
+import java.util.Scanner;
+
+public class WheelOfFortune {
+
+	public static void main(String[] args) {
+	
+	Scanner input = new Scanner(System.in);
+	
+	System.out.println("Welcome to the Wheel of Misfortune!");
+	
+	String spin = "";
+	
+	
+	System.out.println("Would you like to spin the wheel?");
+	spin = input.nextLine();
+			
+			while (spin == "yes"); {
+				
+				double rand = Math.random() *5 + 1;
+				int turn = (int)rand;
+				int count = 0;
+				
+				
+				System.out.println("Here we go!!");
+				System.out.println("");
+				if (turn == 1) 
+					System.out.println("Oh no you landed on 1! looks like you have to eat worms! but you made $100");
+				    count = count + 100;
+				
+				if (turn == 2) 
+					System.out.println("HAHA, this is my favorite, drink this expired milk. You landed on 2, and You made $200");
+						count = count + 200; 
+						
+				if (turn == 3) 
+					System.out.println("OH MAN THAT MILK MADE YOU SICK! You've gone bankrupt!");
+						count = 0; 
+				
+				if (turn == 4)
+					System.out.println("Here this might make it better have some tums. You made $300");
+						count = count + 300;
+				
+				if (turn == 5)
+					System.out.println("You hit the jackpot lucky you! Have some chocolate coins. You made $400");
+						count = count + 400;
+						
+				System.out.println("");
+				
+				System.out.println("Would you like to spin again?");
+				spin = input.nextLine();
+				
+				if (spin == "no");{
+					System.out.println("Hope you feel better. Here are your winnings! $" + count);
+			}
+			
+			
+  }
+ }
+}

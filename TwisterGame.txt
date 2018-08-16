@@ -1,0 +1,38 @@
+package twister;
+
+import java.util.Scanner;
+
+public class TwisterArrayGame {
+
+	public static void main (String[] args) {
+	
+java.util.Scanner input = new Scanner(System.in);
+
+String twister[][] = {
+		{"left hand", "right hand", "left foot", "right foot"},
+        {"RED", "GREEN","BLUE","YELLOW"},
+        };
+//nested for loop to dump the entire contents of the array
+
+
+for (int row=0; row<twister.length; row++) {
+	System.out.println("---------" + row); //Allows us to see every time it creates a new row.
+	for (int column = 0; column<twister[row].length; column++) {
+		System.out.println(twister[row][column]);{
+		
+		}			
+			
+		double rand = Math.random()* 4;
+		int rand1 = (int)rand;
+	
+		System.out.println("SPINNNN!");
+		System.out.println(twister[0][rand1]);//Hard coding in our rows and randomizing our columns allows us to display our array in a random fashion
+//without an out of bounds error.
+		rand = Math.random()*4; //we have to create a second random variable to allow us to get fully random choices over the two rows.
+		rand1 = (int)rand;
+		System.out.println(twister[1][rand1]);
+	}
+}
+	}
+}
+	
